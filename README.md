@@ -13,3 +13,14 @@
 2. Jalankan scanner:
    ```bash
    python3 mhd_scanner.py
+
+### 📱 Cara Jalankan di Termux (Android)
+1. Install Termux dari F-Droid.
+2. Jalankan perintah berikut:
+   ```bash
+   pkg update && pkg upgrade
+   pkg install python git
+   pip install requests
+   git clone [https://github.com/muslim-hacker-division/mhd-scanner](https://github.com/muslim-hacker-division/mhd-scanner)
+   cd mhd-scanner
+   python mhd_scanner.py
