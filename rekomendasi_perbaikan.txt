@@ -1,0 +1,17 @@
+==========================================
+ SOLUSI KEAMANAN SERVER (MHD GUARD v1.0)
+==========================================
+
+1. FIX SECURITY HEADERS (Nginx):
+   add_header Content-Security-Policy "default-src 'self';";
+   add_header X-Frame-Options "SAMEORIGIN";
+   add_header X-Content-Type-Options "nosniff";
+
+2. LOCK XML-RPC (WordPress):
+   <Files xmlrpc.php>
+   Order Deny,Allow
+   Deny from all
+   </Files>
+
+3. HIDE SERVER VERSION:
+   server_tokens off;
