@@ -2,7 +2,6 @@ import requests
 import time
 import sys
 
-# Warna untuk tampilan terminal
 HIJAU = '\033[92m'
 MERAH = '\033[91m'
 BIRU = '\033[94m'
@@ -47,7 +46,7 @@ def scan_web(url):
         teks_jalan(f"{KUNING}[!] Memulai inspeksi paket data...{RESET}")
         time.sleep(0.5)
 
-        # 1. Cek Security Headers
+        # 1. Pengecekan melalui Security Headers
         header_list = {
             "Content-Security-Policy": "MISSING (SEO Spam Risk)",
             "Strict-Transport-Security": "MISSING (MitM Risk)",
@@ -62,7 +61,7 @@ def scan_web(url):
             else:
                 print(f" [-] {h:<30} : {MERAH}{msg}{RESET}")
         
-        # 2. Cek Server Version
+        # 2. Cek Server
         time.sleep(0.5)
         server = headers.get('Server', 'Hidden')
         print(f"\n{HIJAU}[ RESULT: INFRASTRUCTURE ]{RESET}")
